@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>日历</title>
+	<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		color: #fff;
+		font-family: "微软雅黑";
+	}
+		#dd{
+			background-color:#ccc;
+			width: 250px;
+			height: 400px;
+             margin: 20px auto;
+		}
+		span{
+			width: 60px;
+			height: 60px;
+			background-color: #000;
+			display: inline-block;
+			margin-left: 16px;
+			text-align: center;
+			line-height: 60px;
+			cursor: pointer;
+		}
+        #u1,#u2,#u3,#u4{
+        	padding-top: 20px;
+        }
+        #spa{
+        	border: 1px solid;
+        	height: 60px;
+        	width: 200px;
+        	margin-top: 10px;
+        	margin-left: 24px;
+        	color: #f00;
+        	background-color: #fff;
+        	text-align: center;
+        	line-height: 60px;
+        	cursor: pointer;
+        }
+        .aa{
+        	background-color: #f00;
+        }
+	</style>
+</head>
+<body>
+<div id="dd">
+	<div id="u1">
+		<span class="aa">1</span>
+		<span>2</span>
+		<span>3</span>
+	</div>
+	<div id="u2">
+		<span>4</span>
+		<span>5</span>
+		<span>6</span>
+	</div>
+	<div id="u3">
+		<span>7</span>
+		<span>8</span>
+		<span>9</span>
+	</div>
+	<div id="u4">
+		<span>10</span>
+		<span>11</span>
+		<span>12</span>
+	</div>
+	<div id="spa">这是一月活动内容</div>
+</div>
+
+<script type="text/javascript">
+	var sz=new Array(
+		"这是一月活动内容",
+		"这是二月活动内容",
+		"这是三月活动内容",
+		"这是四月活动内容",
+        "这是五月活动内容",
+		"这是六月活动内容",
+		"这是七月活动内容",
+        "这是八月活动内容",
+		"这是九月活动内容",
+		"这是十月活动内容",
+		"这是十一月活动内容",
+		"这是十二月活动内容")
+    
+    for (var i=0;i<sz.length;i++){ 
+    	 var span=document.getElementsByTagName('span');
+    	 span[i].index=i;
+             span[i].onmouseover=function () {            	
+                       for (var i=0;i<sz.length;i++) {
+                       	span[i].className='';
+                       }
+             	span[this.index].className='aa';      
+                document.getElementById('spa').innerText=sz[this.index];           
+             }
+    }
+
+
+</script>
+</body>
+</html>
