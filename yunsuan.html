@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>运算</title>
+</head>
+<body style="font-family:'微软雅黑'">
+求和:<input id="ip1" type="text" name="">+<input id="ip2" type="text" name="">=<button onclick="jia()">运算</button><br><br>
+求差:<input id="ip3" type="text" name="">-<input id="ip4" type="text" name="">=<button onclick="cha()">运算</button><br><br>
+求积:<input id="ip5" type="text" name="">x<input id="ip6" type="text" name="">=<button onclick="ji()">运算</button><br><br>
+求商:<input id="ip7" type="text" name="">÷<input id="ip8" type="text" name="">=<button onclick="shang()">运算</button><br><br>
+求模:<input id="ip9" type="text" name="">%<input id="ip10" type="text" name="">=<button onclick="mo()">运算</button><br><br>
+<script type="text/javascript">
+  //求和
+	function jia(){
+		var ip1=document.getElementById('ip1');
+		var ip2=document.getElementById('ip2');
+		if (!isNaN(ip1.value)){
+                 ip1=parseInt(ip1.value);
+                 if (!isNaN(ip2.value)){
+                 	ip2=parseInt(ip2.value);
+                 	alert(ip1+ip2);
+                 }else{
+                 	alert("请输入数字");
+                 }
+
+		}else{
+			alert("请输入数字");
+		}
+	}
+  //求差
+	function cha(){
+		var ip3=document.getElementById('ip3');
+		var ip4=document.getElementById('ip4');
+		if (!isNaN(ip3.value)){
+                 ip3=ip3.value;
+                 if (!isNaN(ip4.value)){
+                 	ip4=ip4.value;
+                 	alert(ip3-ip4);
+                 }else{
+                 	alert("请输入数字");
+                 }
+
+		}else{
+			alert("请输入数字");
+		}
+	}
+
+	//求积
+	function ji(){
+		var ip5=document.getElementById('ip5');
+		var ip6=document.getElementById('ip6');
+		if (!isNaN(ip5.value)){
+                 ip5=ip5.value;
+                 if (!isNaN(ip6.value)){
+                 	ip6=ip6.value;
+                 	alert(ip5*ip6);
+                 }else{
+                 	alert("请输入数字");
+                 }
+
+		}else{
+			alert("请输入数字");
+		}
+	}
+	//求商
+	function shang(){
+		var ip7=document.getElementById('ip7');
+		var ip8=document.getElementById('ip8');
+		if (!isNaN(ip7.value)){
+                 ip7=ip7.value;
+                 if (!isNaN(ip8.value)){
+                 	ip8=ip8.value;
+                 	alert(ip7/ip8);
+                 }else{
+                 	alert("请输入数字");
+                 }
+
+		}else{
+			alert("请输入数字");
+		}
+	}
+	//求模
+	function mo(){
+		var ip9=document.getElementById('ip9');
+		var ip10=document.getElementById('ip10');
+		if (!isNaN(ip9.value)){
+                 ip9=ip9.value;
+                 if (!isNaN(ip10.value)){
+                 	ip10=ip10.value;
+                 	alert(ip9%ip10);
+                 }else{
+                 	alert("请输入数字");
+                 }
+
+		}else{
+			alert("请输入数字");
+		}
+	}
+</script>
+</body>
+</html>
